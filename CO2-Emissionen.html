@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelle Co2-Emissionen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+  </head>
+<style> 
+#bildImHeader{
+    height: 40%;
+    width: 40%;
+    
+}
+
+.homeButton{
+    height: 24px;
+    width: 24px;
+    margin-right: 5px;
+}
+.instagramLogo{
+    height: 24px;
+    width: 24px;
+    margin-right: 5px;
+}
+    .facebookLogo{
+        height: 24px;
+        width: 24px;
+        margin-right: 5px;
+    }
+    .xLogo{
+        height: 24px;
+        width: 24px;
+        margin-right: 5px;
+    }
+
+    .youtubeLogo{
+        width: 24px; 
+        height: 24px; 
+        margin-right: 5px;}
+
+    .book{
+        width: 24px; 
+        height: 24px; 
+        margin-right: 5px;
+
+            }
+
+    .footer{
+    background-color: rgb(87, 186, 97);
+    padding: 1cm;
+    }
+</style>
+
+<body class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg bg-body-secondary">
+        <div class="container">
+           
+            <a class="navbar-brand" href="#">
+                <img src="Eco Universe.png" id="bildImHeader"> <!--Quelle: eigene Darstellung mit Canva: https://www.canva.com/design/DAGTjzmoH9E/VV7WGqQV0K45FGhp3S-Eyg/edit-->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link d-flex align-items-center" href="http://127.0.0.1:5500/index.html" target="_blank">
+                <img src="HomeButton.webp" class="homeButton"> Home</a> <!--Quelle Bild: https://pixabay.com/de/vectors/%C3%B6ko-bau-haus-1894026/-->
+
+                <a class="nav-link d-flex align-items-center" id="toggleDirection" target="_blank">
+                    <img src="book-1157657_1280.webp"  class="book">Switch direction!</a> <!--Quelle Bild: https://pixabay.com/de/vectors/buch-lesen-b%C3%BCcher-lernen-text-1157657/-->
+
+                <a class="nav-link d-flex align-items-center" href="https://www.instagram.com/" target="_blank">
+                    <img src="instagram-1581266_640.webp" class="instagramLogo">Instagram</a> <!--Quelle Bild: https://pixabay.com/de/illustrations/instagram-logo-foto-kamera-1581266/-->
+
+                <a class="nav-link d-flex align-items-center" href="https://de-de.facebook.com/" target="_blank">
+                    <img src="facebook-6338509_1280.webp" class="facebookLogo">Facebook</a> <!--Quelle Bild: https://pixabay.com/de/vectors/facebook-facebook-logo-6338509/-->
+
+                <a class="nav-link d-flex align-items-center" href="https://x.com/?lang=de&mx=2" target="_blank">
+                    <img src="transparent-x-logo-logo-brand-identity-company-organization-black-background-white-x-logo-for-1710916376217.webp" class="xLogo">X</a> <!--QUelle Bild: https://www.cleanpng.com/png-x-logo-logo-brand-identity-company-organization-bl-7946611/-->
+
+                <a class="nav-link d-flex align-items-center" href="https://www.youtube.com/" target="_blank">
+                    <img src="youtube-6616310_1280.webp" class="youtubeLogo">Youtube</a> <!--Quelle Bild: https://pixabay.com/de/vectors/youtube-logo-medien-multimedia-6616310/-->
+                                    
+                                    
+                                    
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+  
+    <main>
+    
+    <div class="container">
+      <br>
+        <h3><strong>Tabelle Co2-Emissionen </strong></h3>
+        <br>
+    <div class="tabelle-responsive">
+        <div class="row">
+            <div class="col-5">
+                <div class="card card-body">
+                    <input type="text" id="eingabe" onkeyup="myFunktion()" placeholder="Suche...">
+
+                </div>
+
+            </div>
+
+        </div>
+        <br>
+
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Unternehmen</th>
+                <th scope="col">Co2-Verbrauch</th>
+                <th scope="col">Land</th>
+                
+              </tr>
+            </thead>
+            <tbody id="myTable">
+              <tr>
+                <tr scope="row">
+                <td>EcoTech Solutions</td>
+                <td>12.500</td>
+                <td>Deutschland</td>
+                
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td> Green Energy Corp</td>
+                <td>8.300</td>
+                <td>USA</td>
+               
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td>BioFarm Industries</td>
+                <td>5.700</td>
+                <td>Kanada</td>
+                
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td>Urban Transport Inc.</td>
+                <td>15.200</td>
+                <td>Großbritannien</td>
+                
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td>Clean Water Systems</td>
+                <td>3.900</td>
+                <td>Australien</td>
+                
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td>Solar Innovations Ltd</td>
+                <td>4.600</td>
+                <td>Frankreich</td>
+                
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td>Sustainable Packaging Co.</td>
+                <td>6.800</td>
+                <td>Schweden</td>
+                
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td>Future Foods Group</td>
+                <td>7.400</td>
+                <td>Niederlande</td> 		
+               
+               </tr>
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td>EcoBuild Construction</td>
+                <td>10.100 </td>
+                <td>Norwegen</td>
+                
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td>GreenTech Manufacturing</td> 
+                <td>9.500</td>
+                <td>Japan</td>
+                
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td>CleanTech Innovations</td>
+                <td>11.200</td>
+                <td>Schweiz</td>
+                
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td>EcoFashion Brands</td>
+                <td>4.300</td>
+                <td>Italien</td>
+                
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td>Renewable Resources Inc.</td>
+                <td>9.800</td>
+                <td>Brasilien</td>
+                
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td>Smart Grid Solutions</td>
+                <td>7.600</td>
+                <td>Südkorea</td>
+                
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td>Urban Agriculture Co.</td>
+                <td>3.500</td>
+                <td>Neuseeland</td>
+                
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td>Green Logistics Group</td>
+                <td>6.900</td>
+                <td>Spanien</td>
+                
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td>ZeroWaste Packaging</td>
+                <td>5.200</td>
+                <td>Dänemark</td>
+                
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td>Clean Air Technologies</td>
+                <td>8.700</td>
+                <td>Finnland</td>
+                
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td>Sustainable Mining Corp.</td>
+                <td>14.400</td>
+                <td>Australien</td>
+                
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td>Eco-Friendly Chemicals</td>
+                <td>10.300</td>
+                <td>Indien</td>
+                
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td>EcoHome Construction</td>
+                <td>13.500</td>
+                <td>Kananda</td>
+                
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td>GreenTech Automotive</td>
+                <td>9.000</td>
+                <td>USA</td>
+                
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td> Clean Energy Solutions</td>
+                <td>7.800</td>
+                <td>Deutschland</td>
+                
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td>Organic Food Co.</td>
+                <td>4.200</td>
+                <td>Frankreich</td>
+                
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td>Smart Waste Management</td>
+                <td>6.400</td>
+                <td>Großbritannien</td>
+                
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td>Sustainable Textile Group</td>
+                <td>5.900</td>
+                <td>Portugal</td>
+                
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td>Eco-Friendly Electronics</td>
+                <td>8.100</td>
+                <td>Japan</td>
+                
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td>Renewable Water Systems</td>
+                <td>3.300</td>
+                <td>Australien</td>
+                
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td>Urban Mobility Innovations</td>
+                <td>10.600</td>
+                <td>Schweden</td>
+                
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td>Green Building Materials</td>
+                <td>11.700</td>
+                <td>Norgwegen</td>
+                
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td>EcoSmart Appliances</td>
+                <td>8.500</td>
+                <td>Italien</td>
+                
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td>Green Construction Group</td>
+                <td>12.000</td>
+                <td>USA</td>
+                
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td>Clean Fuel Technologies</td>
+                <td>9.300</td>
+                <td>Kananda</td>
+              
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td>Organic Farming Solutions</td>
+                <td>4.800</td>
+                <td>Neuseeland</td>
+                
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td>Sustainable Seafood Co.</td>
+                <td>5.600</td>
+                <td>Norwegen</td>
+                
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td>Eco-Friendly Cosmetics</td>
+                <td>3.700</td>
+                <td>Frankreich</td>
+                
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td>Renewable Energy Partners</td>
+                <td>10.200</td>
+                <td>Australien/td>
+                
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td> Green Energy Corp</td>
+                <td>8.300</td>
+                <td>USA</td>
+                
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td> Green Energy Corp</td>
+                <td>8.300</td>
+                <td>USA</td>
+                
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td>Smart City Innovations</td>
+                <td>11.400</td>
+                <td>Deutschland</td>
+                
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td>Green Logistics Solutions</td>
+                <td>7.100</td>
+                <td>Schweden</td>
+                
+              </tr>
+              <tr>
+                <tr scope="row">
+                <td>Zero Emission Transport</td>
+                <td>14.800</td>
+                <td>Großbritannien</td>
+                
+              </tr>
+
+
+
+            </tbody>
+          </table>
+        </main>
+
+        <footer class="mt-auto">
+            <div class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="nav justify-content-center">
+                                <li class="nav-item mx-2"><a class="nav-link text-white" href="http://127.0.0.1:5500/%C3%9Cber%20uns.html">Über uns</a></li>
+                                <li class="nav-item mx-2"><a class="nav-link text-white" href="http://127.0.0.1:5500/Impressum.html">Impressum</a></li>
+                                <li class="nav-item mx-2"><a class="nav-link text-white" href="http://127.0.0.1:5500/Kontakt.html">Kontakt</a></li>
+                               
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+
+    </div>
+</div>
+
+<script>
+$(document).ready(function(){
+  $("#eingabe").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+
+<script>
+  let isRTL = false; 
+
+  function setDirection() {
+      if (isRTL) {
+          document.body.style.direction = 'rtl'; 
+          document.getElementById('navbar').classList.remove('flex-column');
+          document.getElementById('navbar').classList.add('flex-column-reverse'); 
+      } else {
+          document.body.style.direction = 'ltr'; 
+          document.getElementById('navbar').classList.remove('flex-column-reverse');
+          document.getElementById('navbar').classList.add('flex-column'); 
+      }
+  }
+
+  
+  document.getElementById('toggleDirection').addEventListener('click', function() {
+      isRTL = !isRTL; 
+      setDirection();
+  });
+
+  
+  setDirection();
+</script>
+
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>  
+</body>
+</html>
